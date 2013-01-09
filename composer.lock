@@ -1,5 +1,5 @@
 {
-    "hash": "b73e66c2f268a9f5ee2f1773d9f01dc7",
+    "hash": "07347459e9905682ad2893e1583dc141",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -240,6 +240,49 @@
             ]
         },
         {
+            "name": "phluid/phluid",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beaucollins/phluid-php",
+                "reference": "734d46e65eba81ab0d1589a88c6532c283882b3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/beaucollins/phluid-php/archive/734d46e65eba81ab0d1589a88c6532c283882b3f.zip",
+                "reference": "734d46e65eba81ab0d1589a88c6532c283882b3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "react/react": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "time": "2013-01-02 00:56:11",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Phluid": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Beau Collins",
+                    "email": "beaucollins@gmail.com",
+                    "homepage": "http://viewsource.beaucollins.com"
+                }
+            ],
+            "description": "A PHP microframework",
+            "homepage": "http://github.com/beaucollins/phluid-php"
+        },
+        {
             "name": "react/promise",
             "version": "v1.0.3",
             "source": {
@@ -289,12 +332,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/react",
-                "reference": "dc3727b7403d3a0d0ff940d71c3c4adc14b2300f"
+                "reference": "v0.2.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/reactphp/react/archive/dc3727b7403d3a0d0ff940d71c3c4adc14b2300f.zip",
-                "reference": "dc3727b7403d3a0d0ff940d71c3c4adc14b2300f",
+                "url": "https://github.com/reactphp/react/archive/v0.2.7.zip",
+                "reference": "v0.2.7",
                 "shasum": ""
             },
             "require": {
@@ -317,7 +360,7 @@
                 "ext-libevent": "*",
                 "ext-libev": "*"
             },
-            "time": "2013-01-04 22:41:12",
+            "time": "2013-01-05 14:26:12",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -397,6 +440,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "react/react": 20
+        "react/react": 20,
+        "phluid/phluid": 20
     }
 }

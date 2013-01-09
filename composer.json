@@ -1,5 +1,6 @@
 {
   "require": {
-    "react/react":"master-dev"
+    "react/react":"master-dev",
+    "phluid/phluid":"master-dev"
   }
 }
