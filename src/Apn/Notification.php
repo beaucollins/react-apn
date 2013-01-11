@@ -34,25 +34,25 @@ class Notification {
     return $this->alert;
   }
   
-  function setBadge($badge){
+  function setBadge( $badge ){
     $this->badge = $badge;
   }
   
-  function getBadge($badge){
+  function getBadge(){
     return $this->badge;
   }
   
-  function setSound($sound){
+  function setSound( $sound ){
     $this->sound = $sound;
   }
   
-  function getSound($sound){
+  function getSound(){
     return $this->sound;
   }
   
   function encode(){
     $aps = array(
-      'alert' => $this->alert;
+      'alert' => $this->alert
     );
     if( $this->getSound() ) $aps['sound'] = $this->getSound();
     if( $this->getBadge() ) $aps['badge'] = $this->getBadge();

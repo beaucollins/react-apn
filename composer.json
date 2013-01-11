@@ -1,6 +1,7 @@
 {
   "require": {
     "react/react":"master-dev",
-    "phluid/phluid":"master-dev"
+    "phluid/phluid":"master-dev",
+    "predis/predis-async":"master-dev"
   }
 }

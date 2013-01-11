@@ -43,7 +43,7 @@ class TokenServer extends EventEmitter {
 			foreach ($this->token_store as $device => $time) {
 				$notification = new \Apn\Notification( $device );
 				$notification->setAlert( $req->body['message'] );
-				$this->gateway->write( $notification->encode() );
+				$this->gateway->sendNotification( $notification );
 			}
 			
 			$res->setHeader( 'Content-Type', 'application/json' );
@@ -59,12 +59,12 @@ class TokenServer extends EventEmitter {
 		$this->app->createServer( $http );
 	}
 	
-	public static function createServer( $loop, $gateway, $feedback, $token_store, $port, $host = null ){
+	public static function createServer( $loop, $gateway, $feedback, $token_store, $port = 4040, $host = null ){
 		$socket = new SocketServer( $loop );
 		$http = new HttpServer( $socket );
 		$token_server = new TokenServer( $gateway, $feedback, $token_store, $http );
 		
-		$socket->listen( 4000, '0.0.0.0' );
+		$socket->listen( $port, $host );
 		
 	}
 	
